@@ -14,6 +14,13 @@ namespace TileTwo
         public int durability = 0;
         public int animationTotal = 0;
         public bool animate = false;
+        public bool passable = true;
+        public bool GetPassable()
+        {
+            if (ID > 135)
+                return true;
+            return false;
+        }
         public void generate(int ID, bool animate, int animationTotal)
         {
             this.ID = ID;
